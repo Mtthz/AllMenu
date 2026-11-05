@@ -1,0 +1,54 @@
+name: Crash report
+description: The game crashes or won't start with AllMenu
+labels: ["crash"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! You can write in English or Portuguese.
+        The crash file is in your game folder, inside `crash-reports`.
+  - type: input
+    id: version
+    attributes:
+      label: AllMenu version
+      description: The file name you downloaded, e.g. AllMenu v1.0.00.jar
+    validations:
+      required: true
+  - type: dropdown
+    id: when
+    attributes:
+      label: When does it crash?
+      options:
+        - While the game is starting
+        - When opening or creating a world
+        - When opening the menu or one of its tabs
+        - While playing
+        - Other (explain below)
+    validations:
+      required: true
+  - type: textarea
+    id: crash
+    attributes:
+      label: Crash report
+      description: Attach the crash report file, or paste it on a site like https://mclo.gs and put the link here.
+    validations:
+      required: true
+  - type: input
+    id: minecraft
+    attributes:
+      label: Minecraft version
+      value: 1.20.1
+  - type: input
+    id: forge
+    attributes:
+      label: Forge version
+      placeholder: 47.4.28
+  - type: textarea
+    id: mods
+    attributes:
+      label: Other mods
+      description: A modpack name or the list of other mods you use.
+  - type: textarea
+    id: what
+    attributes:
+      label: What were you doing?
